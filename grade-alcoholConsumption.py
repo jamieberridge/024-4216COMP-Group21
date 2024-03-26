@@ -19,8 +19,5 @@ ax.grid(True)
 for i, grade in enumerate(alcoholToGrades):
     ax.text(i, grade + 0.1, f"{grade:.2f}", ha='center', va='bottom')
 
-# Rotate x-axis labels for better readability
-plt.xticks(rotation=0)
-
 # Display the plot
 plt.show()
