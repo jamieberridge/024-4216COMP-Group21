@@ -1,4 +1,4 @@
-# List of visualisations formatted in a list to allow for easy manipulation
+# List of visualisations formatted in a list to allow for easy manipulation 
 listOfVisualisations = [
     # Bailey's trends
     "(1) Weekend alcohol consumption and grade", 
@@ -9,7 +9,7 @@ listOfVisualisations = [
     "(0) Exit"
     ]
 
-# Loop to  display the visualisation options and allow the user to select another option or exit
+# Loop to display the visualisation options and allow the user to select another option or exit
 while True:
     print("Choose a visualisation from the following: ")
     for x in listOfVisualisations:  
@@ -30,4 +30,3 @@ while True:
     elif userInput == "4":
         with open("studyTime.py") as file:
             exec(file.read())
-
