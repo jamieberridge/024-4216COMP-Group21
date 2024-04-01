@@ -19,14 +19,14 @@ while True:
     if userInput == "0":
         break
     elif userInput == "1":
-        with open("grade-alcoholConsumption.py") as file:
+        with open("bailey/grade-alcoholConsumption.py") as file:
             exec(file.read())
     elif userInput == "2":
-        with open("histogram.py") as file:
+        with open("bailey/histogram.py") as file:
             exec(file.read())
     elif userInput == "3":
-        with open("romantic.py") as file:
+        with open("bailey/romantic.py") as file:
             exec(file.read())
     elif userInput == "4":
-        with open("studyTime.py") as file:
+        with open("bailey/studyTime.py") as file:
             exec(file.read())
