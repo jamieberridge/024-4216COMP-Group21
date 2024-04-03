@@ -7,7 +7,8 @@ listOfVisualisations = [
     "(4) Travel vs study time",
     # Jamie's trends
     "(5) Effect of Internet Access on final grade",
-    "(6) Optimal Study Time"
+    "(6) Optimal Study Time by final grade",
+    "(7) Effect on having a guardian of same sex on grades",
     "(0) Exit"
     ]
 
@@ -37,4 +38,7 @@ while True:
             exec(file.read())
     elif userInput == "6":
         with open("jamie/optimalStudyTime.py") as file:
+            exec(file.read())
+    elif userInput == "7":
+        with open("jamie/sameSexGuardian.py") as file:
             exec(file.read())
