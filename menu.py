@@ -1,11 +1,11 @@
 # List of visualisations formatted in a list to allow for easy manipulation 
 listOfVisualisations = [
-    # Bailey's trends
+    "   Bailey's trends:",
     "(1) Weekend alcohol consumption and grade", 
     "(2) Age distribution of students",
     "(3) Relationship Status by Parental Cohabitation",
     "(4) Travel vs study time",
-    # Jamie's trends
+    "   Jamie's trends:",
     "(5) Effect of Internet Access on final grade",
     "(6) Optimal Study Time by final grade",
     "(7) Effect on having a guardian of same sex on grades",
