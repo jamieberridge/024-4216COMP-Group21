@@ -10,14 +10,10 @@ mathsGradesByStudyTime = maths.groupby("studytime",)["G3"]
 porGradesByStudyTime = por.groupby("studytime",)["G3"]
 
 # Plotting the line graph for maths grades
-plt.plot(mathsGradesByStudyTime.mean(), label="Maths")
+plt.plot(mathsGradesByStudyTime.mean(), label="Maths", marker='o')
 # Plotting the line graph for Portuguese grades
-plt.plot(porGradesByStudyTime.mean(), label="Portuguese")
+plt.plot(porGradesByStudyTime.mean(), label="Portuguese", marker='o')
 
-# Plotting the points on the graph for maths grades
-plt.scatter(porGradesByStudyTime.mean().index, mathsGradesByStudyTime.mean())
-# Plotting the line graph for Portuguese grades
-plt.scatter(porGradesByStudyTime.mean().index, porGradesByStudyTime.mean())
 # Plotting line to show optimal study time
 plt.axvline(x=3.0, color='r', linestyle='--', label='Optimal Study Time')
 

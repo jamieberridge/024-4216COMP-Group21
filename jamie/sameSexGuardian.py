@@ -2,14 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-def boxplot(file, ax, title):
+def boxplot(subject, ax, title):
     # Get data for male students
-    maleStudentMaleGuardian = file[(file['sex'] == 'M') & (file['guardian'] == 'father')]
-    maleStudentFemaleGuardian = file[(file['sex'] == 'M') & (file['guardian'] == 'mother')]
+    maleStudentMaleGuardian = subject[(subject['sex'] == 'M') & (subject['guardian'] == 'father')]
+    maleStudentFemaleGuardian = subject[(subject['sex'] == 'M') & (subject['guardian'] == 'mother')]
 
     # Get data for female students
-    femaleStudentMaleGuardian = file[(file['sex'] == 'F') & (file['guardian'] == 'father')]
-    femaleStudentFemaleGuardian = file[(file['sex'] == 'F') & (file['guardian'] == 'mother')]
+    femaleStudentMaleGuardian = subject[(subject['sex'] == 'F') & (subject['guardian'] == 'father')]
+    femaleStudentFemaleGuardian = subject[(subject['sex'] == 'F') & (subject['guardian'] == 'mother')]
 
     # Combine data for box plot
     boxplotData = [maleStudentMaleGuardian['G3'], maleStudentFemaleGuardian['G3'], femaleStudentMaleGuardian['G3'], femaleStudentFemaleGuardian['G3']]
