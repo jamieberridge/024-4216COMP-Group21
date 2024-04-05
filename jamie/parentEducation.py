@@ -7,6 +7,7 @@ maths = pd.read_csv("mat2.csv")
 
 def plot(subject, ax, title):
     # Calculate mean parental education
+    #  0 - none, 1 - primary education (4th grade), 2 – 5th to 9th grade, 3 – secondary education or 4 – higher education
     subject['meanParentEducation'] = (subject['Medu'] + subject['Fedu']) / 2
 
     # Drop anomalous data
