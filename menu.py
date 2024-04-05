@@ -81,5 +81,5 @@ while True:
         with open('jamie/studyTimeImprovement.py') as file:
             exec(file.read())
     elif userInput == '10':
-        with open('jamie/.py') as file:
+        with open('jamie/relationshipStatus.py') as file:
             exec(file.read())
