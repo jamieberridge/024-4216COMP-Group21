@@ -1,6 +1,10 @@
+
+#Age distribution of students Histogram
+
 # Import necessary libraries
 import pandas as pd
 import matplotlib.pyplot as plt
+
 
 # Read the datasets into pandas DataFrames
 portuguese = pd.read_csv('por2.csv')
