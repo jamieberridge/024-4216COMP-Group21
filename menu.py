@@ -16,7 +16,8 @@ jamieTrends = [
 ]
 
 leeTrends = [
-    # Names of trends here
+    "(11) Family and school support's effect on grades",
+    "(12) The effect of age on grade average"
 ]
 
 domTrends = [
@@ -27,20 +28,20 @@ domTrends = [
 while True:
     # Display the user with options on whose trends to see
     userInput = input("Whose visualisations do you want to see? \n(1) Bailey's, \n(2) Jamie's, \n(3) Lee's, \n(4) Dom's, \n(5) View Full List, \n(0) Exit \n- ")
-
-    if userInput == ('1'):
+    
+    if userInput == ('1') or userInput.lower() == 'bailey':
         for x in baileyTrends:  
             print(x)
-    elif userInput == ('2'):
+    elif userInput == ('2') or userInput.lower() == 'jamie':
         for x in jamieTrends:
             print(x)
-    elif userInput == ('3'):
+    elif userInput == ('3') or userInput.lower() == 'lee':
         for x in leeTrends:
             print(x)
-    elif userInput == ('4'):
+    elif userInput == ('4') or userInput.lower() == 'dom':
         for x in domTrends:
             print(x)
-    elif userInput == ('5'):
+    elif userInput == ('5') or userInput.lower() == 'all':
         for x in baileyTrends+jamieTrends+leeTrends+domTrends:
             print(x)
     elif userInput == ('0'):
@@ -83,3 +84,13 @@ while True:
     elif userInput == '10':
         with open('jamie/relationshipStatus.py') as file:
             exec(file.read())
+    elif userInput == '11':
+        with open('lee/paidVsSupportGrades.py') as file:
+            exec(file.read())
+    elif userInput == '12':
+        with open('lee/ageForGrade.py') as file:
+            exec(file.read())
+    else:
+        print("Invalid Input")
+        open('menu.py')
+        break
