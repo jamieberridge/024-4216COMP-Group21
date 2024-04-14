@@ -11,10 +11,13 @@ Whose visualisations do you want to see?
 
 If you chose one of our names you'll be met with a menu which will list that indiviuals trends that they have made.
 To select a trend simply enter the corresponding number to the trend you would like to do e.g. if you chose to view Jamie's trends you'll be met with:
-  (5) Effect of Internet Access on final grade
-  (6) Optimal Study Time by final grade
-  (7) Effect on having a guardian of same sex on grades
-  (8) Relationship between the parents education level and the students grades
-  (9) How much does study time improve students on average?
-  (10) Comparison between how a relationship affects grades of each gender
-So if you wanted to select "Effect on having a guardian of same sex on grades" you'd just type 7
+  1 -- Effect of Internet Access on final grade
+  2 -- Optimal Study Time by final grade
+  3 -- Effect on having a guardian of same sex on grades
+  4 -- Relationship between the parents education level and the students grades
+  5 -- How much does study time improve students on average?
+  6 -- Comparison between how a relationship affects grades of each gender
+Which trend would you like to see?
+So if you wanted to select "Effect on having a guardian of same sex on grades" you'd just type 3.
+
+Then after you're finished with the trend just close it down and you'll be redirected back to the main menu.
