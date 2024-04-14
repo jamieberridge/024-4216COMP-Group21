@@ -1,96 +1,86 @@
-# List of visualisations formatted in lists to allow for easy manipulation 
+import os
+
+# List of trends for Bailey
 baileyTrends = [
-    "(1) Weekend alcohol consumption and grade", 
-    "(2) Age distribution of students",
-    "(3) Relationship Status by Parental Cohabitation",
-    "(4) Travel vs study time"
+    "Weekend alcohol consumption and grade",
+    "Age distribution of students",
+    "Relationship Status by Parental Cohabitation",
+    "Travel vs study time"
 ]
 
+# List of trends for Jamie
 jamieTrends = [
-    "(5) Effect of Internet Access on final grade",
-    "(6) Optimal Study Time by final grade",
-    "(7) Effect on having a guardian of same sex on grades",
-    "(8) Relationship between the parents education level and the students grades"
-    "(9) How much does study time improve students on average?"
-    "(10) Comparison between how a relationship affects grades of each gender"
+    "Effect of Internet Access on final grade",
+    "Optimal Study Time by final grade",
+    "Effect on having a guardian of same sex on grades",
+    "Relationship between the parents education level and the students grades",
+    "How much does study time improve students on average?",
+    "Comparison between how a relationship affects grades of each gender"
 ]
 
+# List of trends for Lee
 leeTrends = [
-    "(11) Family and school support's effect on grades",
-    "(12) The effect of age on grade average"
+    "Family and school support's effect on grades",
+    "The effect of age on grade average",
+    "The effect of attendance on grades",
+    "The effect of health on grades",
+    "The effect of nursery attendance on the students prospects of going to higher education",
+    "The reason for choosing the school and the students prospects of going to higher education"
 ]
 
+# List of trends for Dom
 domTrends = [
     # Names of trends here
 ]
 
-# Loop to display the visualisation options and allow the user to select another option or exit
+# Function to display trends
+def displayTrends(trends):
+    count = 0
+    for x in trends:
+        count += 1
+        print("{0} -- {1}".format(count, x))
+
+# Function to open a file
+def openFile(filePath):
+    with open(filePath) as file:
+        exec(file.read())
+
+# Function to select a trend
+def selectTrend(trends, folder):
+    displayTrends(trends)
+    x = int(input("Which trend would you like to see? \n- "))
+    if x >= 1 and x <= len(trends):
+        filePath = os.path.join(folder, f'trend{x}.py')
+        if os.path.exists(filePath):
+            openFile(filePath)
+        else:
+            print("File not found.")
+    else:
+        print("Invalid Input")
+
+# Main loop to select whose visualizations to see
 while True:
-    # Display the user with options on whose trends to see
-    userInput = input("Whose visualisations do you want to see? \n(1) Bailey's, \n(2) Jamie's, \n(3) Lee's, \n(4) Dom's, \n(5) View Full List, \n(0) Exit \n- ")
-    
-    if userInput == ('1') or userInput.lower() == 'bailey':
-        for x in baileyTrends:  
-            print(x)
-    elif userInput == ('2') or userInput.lower() == 'jamie':
-        for x in jamieTrends:
-            print(x)
-    elif userInput == ('3') or userInput.lower() == 'lee':
-        for x in leeTrends:
-            print(x)
-    elif userInput == ('4') or userInput.lower() == 'dom':
-        for x in domTrends:
-            print(x)
-    elif userInput == ('5') or userInput.lower() == 'all':
-        for x in baileyTrends+jamieTrends+leeTrends+domTrends:
-            print(x)
-    elif userInput == ('0'):
+    userInput = input("Whose visualizations do you want to see? \n(1) Bailey's, \n(2) Jamie's, \n(3) Lee's, \n(4) Dom's, \n(5) View Full List, \n(0) Exit \n- ")
+
+    if userInput == '1' or userInput.lower() == 'bailey':
+        selectTrend(baileyTrends, 'bailey')
+    elif userInput == '2' or userInput.lower() == 'jamie':
+        selectTrend(jamieTrends, 'jamie')
+    elif userInput == '3' or userInput.lower() == 'lee':
+        selectTrend(leeTrends, 'lee')
+    elif userInput == '4' or userInput.lower() == 'dom':
+        selectTrend(domTrends, 'dom')
+    elif userInput == '5' or userInput.lower() == 'all':
+        print("Bailey's trends are:")
+        displayTrends(baileyTrends)
+        print("Jamie's trends are:")
+        displayTrends(jamieTrends)
+        print("Lee's trends are:")
+        displayTrends(leeTrends)
+        print("Dom's trends are:")
+        displayTrends(domTrends)
+        x = input("Press Enter to continue...")
+    elif userInput == '0':
         break
     else:
         print("Invalid Input")
-        break
-    
-    # Asking the user what trend they'd like to see from their selected list
-    userInput = input("- ")
-    if userInput == '0':
-        break
-    elif userInput == '1':
-        with open('bailey/grade-alcoholConsumption.py') as file:
-            exec(file.read())
-    elif userInput == '2':
-        with open('bailey/histogram.py') as file:
-            exec(file.read())
-    elif userInput == '3':
-        with open('bailey/romantic.py') as file:
-            exec(file.read())
-    elif userInput == '4':
-        with open('bailey/studyTime.py') as file:
-            exec(file.read())
-    elif userInput == '5':
-        with open('jamie/internet.py') as file:
-            exec(file.read())
-    elif userInput == '6':
-        with open('jamie/optimalStudyTime.py') as file:
-            exec(file.read())
-    elif userInput == '7':
-        with open('jamie/sameSexGuardian.py') as file:
-            exec(file.read())
-    elif userInput == '8':
-        with open('jamie/parentEducation.py') as file:
-            exec(file.read())
-    elif userInput == '9':
-        with open('jamie/studyTimeImprovement.py') as file:
-            exec(file.read())
-    elif userInput == '10':
-        with open('jamie/relationshipStatus.py') as file:
-            exec(file.read())
-    elif userInput == '11':
-        with open('lee/paidVsSupportGrades.py') as file:
-            exec(file.read())
-    elif userInput == '12':
-        with open('lee/ageForGrade.py') as file:
-            exec(file.read())
-    else:
-        print("Invalid Input")
-        open('menu.py')
-        break

@@ -1,3 +1,6 @@
+
+## Optimal Study Time
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
