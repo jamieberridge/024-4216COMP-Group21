@@ -41,3 +41,5 @@ plt.legend(["Family Support", "School Support", "Paid"], loc='lower center')
 
 # Show the graph
 plt.show()
+
+
