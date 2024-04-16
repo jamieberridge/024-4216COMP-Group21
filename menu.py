@@ -25,7 +25,7 @@ leeTrends = [
     "The effect of attendance on grades",
     "The effect of health on grades",
     "The effect of nursery attendance on the students prospects of going to higher education",
-    "The reason for choosing the school and the students prospects of going to higher education"
+    "The reason for choosing the school and the students prospects of going to higher education",
 ]
 
 # List of trends for Dom
