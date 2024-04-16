@@ -30,7 +30,10 @@ leeTrends = [
 
 # List of trends for Dom
 domTrends = [
-    # Names of trends here
+    "Effects of Internet Access on student Failures",
+    "Effects of Free Time on Grades",
+    "How student Absences correlate to academic failures",
+    "The correlation between Family support on student Failures"
 ]
 
 # Function to display trends
