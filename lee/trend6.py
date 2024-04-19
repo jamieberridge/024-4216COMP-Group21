@@ -18,12 +18,12 @@ plt.figure(figsize=(15, 7))
 
 # Plot for Maths
 plt.subplot(1, 2, 1)
-plt.pie(mathsHigherEdu.value_counts(), labels = mathsHigherEdu.value_counts().index, textprops={'size': 'smaller'})
+plt.pie(mathsHigherEdu.value_counts(), labels = mathsHigherEdu.value_counts().index, textprops={'size': 'smaller'}, autopct='%1.1f%%')
 plt.title('Reason for going to higher education (Maths)')
 plt.axis('equal')
 # Plot for Portuguese
 plt.subplot(1, 2, 2)
-plt.pie(porHigherEdu.value_counts(), labels = porHigherEdu.value_counts().index, textprops={'size': 'smaller'})
+plt.pie(porHigherEdu.value_counts(), labels = porHigherEdu.value_counts().index, textprops={'size': 'smaller'}, autopct='%1.1f%%')
 plt.title('Reason for going to higher education (Portuguese)')
 plt.axis('equal')
 plt.tight_layout()
